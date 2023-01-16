@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
         <img src="/whatsapp.svg" alt="whatsapp icon"/>
         <img src="/discord.svg" alt="discord icon"/>
       </div>
-      <button className="btn btn-cta">BİZE ULAŞ</button>
+      <button className="btn btn-cta"><Link href="https://docs.google.com/forms/d/e/1FAIpQLSf_oiFNow0vfISCxanxsqQeaQdzcLqihYpYT9CdfqoQyekXXg/viewform?usp=sf_link" target="_blank">Bize Ulaş</Link></button>
     </section>
   );
 };

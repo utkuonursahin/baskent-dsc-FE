@@ -1,5 +1,6 @@
 @use "../abstracts" as abs;
 .error{
+  z-index: 3;
   position: absolute;
   inset: 0;
   height: 20rem;

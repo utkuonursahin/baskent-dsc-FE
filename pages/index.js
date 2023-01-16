@@ -1,21 +1,23 @@
 import axios from "axios";
 import Head from 'next/head'
+import Link from "next/link";
+import Image from "next/image";
 import Header from "../src/components/Header/Header";
 import Hero from "../src/components/Hero/Hero";
 import Features from "../src/components/Features/Features";
 import Announcements from "../src/components/Announcements/Announcements";
 import {AnnouncementProvider} from "../src/context/AnnouncementContext";
-import {ErrorProvider} from "../src/context/ErrorContext";
 import Executives from "../src/components/Executives/Executives";
 import {ExecutiveProvider} from "../src/context/ExecutiveContext";
 import Statistics from "../src/components/Statistics/Statistics";
 import FAQ from "../src/components/FAQ/FAQ";
 import Contact from "../src/components/Contact/Contact";
 import useObserver from "../src/hooks/useObserver";
-import Link from "next/link";
-import Image from "next/image";
+import Error from "../src/components/Error/Error";
+import {useError} from "../src/context/ErrorContext";
 export default function Home({initAnnouncements, initExecutives}) {
   const [elementRef,containerRef] = useObserver({root:null, rootMargin:"-150px", threshold:0},'sticky');
+  const {error} = useError();
   return (
     <div className="page-wrapper">
       <Head>
@@ -25,17 +27,16 @@ export default function Home({initAnnouncements, initExecutives}) {
       </Head>
       <Header elementRef={elementRef}/>
       <main className="main">
+        {error && <Error/>}
         <Image src="/curve-line.svg" alt="bg vector" width={100} height={100} className="background-vectors"/>
         <Hero containerRef={containerRef}/>
         <Features/>
-        <ErrorProvider>
-          <AnnouncementProvider initAnnouncements={initAnnouncements}>
-            <Announcements/>
-          </AnnouncementProvider>
-          <ExecutiveProvider initExecutives={initExecutives}>
-            <Executives/>
-          </ExecutiveProvider>
-        </ErrorProvider>
+        <AnnouncementProvider initAnnouncements={initAnnouncements}>
+          <Announcements/>
+        </AnnouncementProvider>
+        <ExecutiveProvider initExecutives={initExecutives}>
+          <Executives/>
+        </ExecutiveProvider>
         <Statistics/>
         <FAQ/>
         <Contact/>
@@ -65,5 +66,5 @@ export async function getStaticProps() {
         initExecutives
       }
     }
-  } catch {return {notFound: true}}
+  } catch {return {props:{}}}
 }
