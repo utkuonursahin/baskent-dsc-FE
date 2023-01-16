@@ -39,6 +39,10 @@
       width: 100%;
       display: none;
       gap: 2rem;
+      & img{
+        width: 5rem;
+        height: 5rem;
+      }
     }
     &-element.active{
       display: flex;
