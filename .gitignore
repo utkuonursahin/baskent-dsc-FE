@@ -46,3 +46,4 @@ src/styles/layout/admin.scss
 src/styles/layout/dashboard.scss
 src/styles/layout/panel.scss
 src/styles/layout/popups.scss
+src/styles/layout/redeploy.scss
