@@ -9,8 +9,8 @@ export default function Announcement ({announcement}) {
   return (
     <div className="page-wrapper">
       <Head>
-        <title>Developer Students Community -Develop Together!-</title>
-        <meta name="description" content="Başkent Üniversitesi Developer Students Community Websitesi" />
+        <title>Bir Duyurumuz Var!</title>
+        <meta name="description" content="Başkent Üniversitesi Developer Students Community Duyuru Sayfası" />
         <link rel="icon" href="/logo-blue.svg" />
       </Head>
       <Header/>
@@ -26,7 +26,7 @@ export default function Announcement ({announcement}) {
       <footer className="footer">
         <span>
           Built by <Link href="https://www.linkedin.com/in/utku-onur-sahin/">Utku Onur Sahin</Link> in the name of DSC.<br/>
-          All rights reserved © 2022
+          All rights reserved © 2023
         </span>
         <img src="/logo-white.svg" alt="DSC Logo" className="footer__logo"/>
       </footer>

@@ -1,7 +1,6 @@
 import axios from "axios";
 import Head from 'next/head'
 import Link from "next/link";
-import Image from "next/image";
 import Header from "../src/components/Header/Header";
 import Hero from "../src/components/Hero/Hero";
 import Features from "../src/components/Features/Features";
@@ -23,7 +22,8 @@ export default function Home({initAnnouncements, initExecutives}) {
       <Head>
         <title>Developer Students Community -Develop Together!-</title>
         <meta name="description" content="Başkent Üniversitesi Developer Students Community Websitesi" />
-        <link rel="icon" href="/logo-blue.svg" />
+        <meta charSet="UTF-8"/>
+        <link rel="icon" href="/logo-blue.svg"/>
       </Head>
       <Header elementRef={elementRef}/>
       <main className="main">

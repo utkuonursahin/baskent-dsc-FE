@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import Image from 'next/image';
 const Hero = ({containerRef}) => {
   return (
     <section lang="tr" className="hero" ref={containerRef} id="hero">
