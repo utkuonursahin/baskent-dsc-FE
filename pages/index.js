@@ -21,14 +21,13 @@ export default function Home({initAnnouncements, initExecutives}) {
   return (
     <div className="page-wrapper">
       <Head>
-        <title>Developer Students Community -Derslerle Yetinmeyenlere!-</title>
+        <title>Developer Students Community -Develop Together!-</title>
         <meta name="description" content="Başkent Üniversitesi Developer Students Community Websitesi" />
         <link rel="icon" href="/logo-blue.svg" />
       </Head>
       <Header elementRef={elementRef}/>
       <main className="main">
         {error && <Error/>}
-        <Image src="/curve-line.svg" alt="bg vector" width={100} height={100} className="background-vectors"/>
         <Hero containerRef={containerRef}/>
         <Features/>
         <AnnouncementProvider initAnnouncements={initAnnouncements}>
