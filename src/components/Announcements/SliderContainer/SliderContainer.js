@@ -14,7 +14,6 @@ function SliderContainer() {
       return setPage((prevPage) => prevPage + 1);
     }
   };
-  console.log("Announcement: ",announcements);
   return (
     <Swiper modules={[Pagination, EffectFade]} pagination={{dynamicBullets:true}} spaceBetween={100} slidesPerView={1} effect={"fade"} onRealIndexChange={handleRIC}>
       {announcements.map((announcement,i) => {
