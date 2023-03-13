@@ -7,7 +7,7 @@ function SliderContent({data}) {
   return (
     <div className="slider-content">
       <Image width={100} height={100} src={`${data.photo}`}
-             loader={loadImg} alt="Executive Photo" crossorigin="anonymous"
+             loader={loadImg} alt="Executive Photo" crossOrigin="anonymous"
              className="slider-content__image"
              sizes="(min-width: 640px) 30vw,
              (min-width: 1024px) 30%,
